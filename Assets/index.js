@@ -79,3 +79,9 @@ function Screen() {
    },100);
 }
 Screen();
+
+// FOR LOADER
+
+function loaded(){ 
+    document.getElementById("loading").style.display = "none";
+ }

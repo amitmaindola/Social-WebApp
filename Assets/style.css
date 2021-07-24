@@ -1,6 +1,22 @@
 * , html , body{
     margin: 0px;
     padding: 0px;
+    
+}
+html{
+    font-size: 18px;
+    background: transparent;
+}
+body{
+    background: transparent;
+}
+/* LOADING */
+#loading{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 10;
+    background-color: white;
 }
 
 /* HEADER AND NAVBAR */
@@ -20,16 +36,18 @@ li i{
 
 header li a{
     text-decoration: none;
+    color: #ffffff;
 }
 header li a:hover{
-    color: #6d7a69;
+    color: #eef;
 }
 
 header{
-    background-color: white;
+    background-color: #00a;
     /* background: transparent; */
     position: fixed;
     width: 100vw;
+    color: white;
     height: 60px;
     opacity: 1;
 }
@@ -41,7 +59,7 @@ header{
 div.container{
     padding-top: 60px;
     height: 100vh;
-    background-color: skyblue;
+    /* background-color: black; */
 }
 
 
@@ -71,8 +89,281 @@ div.container{
         margin-right: 0px;
     }
   }
-@media only screen and (max-width: 252px) {
+@media only screen and (max-width: 262px) {
     header h1{
         display: none;
+    }
+  }
+
+
+.bg-black{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background-color: rgb(139, 131, 131);
+    /* background-color:red; */
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+  /* HOME PAGE CSS */
+  .home-head{
+      display: flex;
+      justify-content: space-around;
+      margin: 10px 0px 20px;
+  }
+ .home-head p{
+    display: inline;
+ }
+ .home-head-text{
+     display: inline;
+ }
+  .create-post , .add-friend{
+      background: #fff;
+      font-size: 22px;
+      padding: 10px;
+      flex-grow: 1;
+      text-decoration: none;
+      border-radius: 6px;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      -ms-border-radius: 6px;
+      -o-border-radius: 6px;
+}
+  .create-post{
+      margin-right: 10px;
+  }
+  .add-friend{
+      margin-left: 10px;
+  }
+    .posts-container{
+        padding: 10px 0;
+    }
+  .post{
+      margin:10px 0;
+      padding: 10px;
+      background-color: #fafaff;
+      border: 2px solid #00a;
+      border-radius: 8px;
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      -ms-border-radius: 8px;
+      -o-border-radius: 8px;
+}
+
+
+  .post .posting-username{
+      font-weight: 500;
+      font-size: 22px;
+      color: blue;
+  }
+  .post .time{
+      color: #008;
+  }
+  .post .reaction {
+      display: flex;
+      flex-direction: row;
+      color: #900 ;
+      font-size: 20px;
+      justify-content: space-around;
+  }
+  .post .reaction a{
+      color: #900;
+  }
+
+  @media only screen and (max-width: 493px) {
+    .home-head p{
+        display: none;
+    }
+  }
+  @media only screen and (max-width: 253px) {
+    .home-head-text{
+        display: none;
+    }
+  }
+
+
+
+
+/* MESSAGE SECTION CSS */
+  .chat-list{
+      padding: 10px 0px;
+  }
+  .chat-list a{
+      text-decoration: none;
+  }
+  .chat-preview{
+      padding: 10px 10px;
+      font-size: 20px;
+      margin: 10px 0px;
+      border: 2px solid #00a;
+      border-radius: 8px;
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      -ms-border-radius: 8px;
+      -o-border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      background-color: #fafaff;
+}
+
+  .chat-list-head{
+      font-size: 24px;
+  }
+  .chat-username{
+      color: blueviolet;
+  }
+  .last-message, .chat-username{
+    display: inline;
+  }
+  .last-message{
+      color: #a00;
+  }
+  @media only screen and (max-width: 260px) {
+    .last-message-time{
+        display: none;
+    }
+  }
+
+
+  /* NOTIFICATION PAGE CSS */
+.notification-envelope{
+    border: 2px solid #00a;
+    padding: 10px;
+    margin: 10px 0px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    background-color: #fafaff;
+}
+
+.notification-envelope a{
+    text-decoration: none;
+    color: #a00 ;
+}
+.notification-time{
+    text-align: right;
+}
+.notifications-list{
+    padding: 10px 0px;
+}
+
+
+
+/* NEW POST PAGE CSS */
+
+.newpost-input{
+    height: 70vh;
+    width: 100%;
+    border: 3px solid blueviolet;
+}
+
+
+
+/* CONVERSATION PAGE CSS */
+.check{
+    color: blue;
+}
+
+
+/* CHATTING SECTION CSS */
+
+.chat-container{
+    display:flex;
+    flex-direction:column;
+    padding-bottom:50px;
+}
+.chat-user{
+    padding:10px;
+    width:50%;
+    margin:10px;
+}
+.chat-user1{
+    background-color:#dfd;
+    margin-right:auto;
+}
+.chat-user2{
+    background-color:#eee;
+    margin-left:auto;
+}
+.name-1{
+    font-weight: 500;
+    color: blue;
+}
+.name-2{
+    font-weight: 500;
+    color: red;
+}
+.chat-time{
+    text-decoration:none ;
+    display:block ;
+    font-size:12px;
+    text-align:right ;
+}
+.chat-input{
+    height: 30px;
+    width: 70vw;
+    border: 3px solid blue;
+}
+.chat-input:focus{
+    /* height: 60px; */
+}
+.chat-input-box{
+    position: fixed;
+    bottom: 5px ;
+    display: flex;
+    /* justify-content: space-between; */
+}
+.chat-input-box button{
+    margin-left: 10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    border: none;
+    background-color: while;
+    color: blue;
+    box-shadow: none;
+    text-align: center;
+    font-size: 28px;
+}
+.chat-input-box button i{
+    font-size: 30px;
+    transform: translate(0px,-5px);
+    -webkit-transform: translate(0px,-5px);
+    -moz-transform: translate(0px,-5px);
+    -ms-transform: translate(0px,-5px);
+    -o-transform: translate(0px,-5px);
+    z-index: 2;
+    background-color: white;
+    
+}
+.chat-input-box button i:hover{
+    color: green;
+}
+@media only screen and (max-width: 900px) {
+    .chat-input{
+        width: 80vw;
+    }
+  }
+@media only screen and (max-width: 600px) {
+    .chat-user{
+        width: 60%;
+    }
+  }
+@media only screen and (max-width: 900px) {
+    .chat-user{
+        width: 60%;
+    }
+  }
+@media only screen and (max-width: 320px) {
+    .chat-user{
+        width: 70%;
     }
   }

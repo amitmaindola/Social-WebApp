@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./login.css">
 </head>
 <body>
+    <div class="bg"></div>
     <div class="login-page">
         <div class="container">
             <div class="intro">
@@ -22,18 +23,17 @@
             </div>
             <div class="form">
                <div class="envelop">
-                <form class="login-form" action="/login" method="/POST">
-                    <br>
-                    <input class="email form-control" type="text" placeholder="Email or Phone Number">
-                    <br>
-                    <input class="password form-control" type="password" placeholder="Password">
-                    <br>
-                    <button class="btn btn-primary btn-signin">Sign In</button>
+                <form class="login-form" action="/login" method="POST">
+                    <input name="email" class="email form-control" type="text" placeholder="Email or Phone Number">
+                  
+                    <input name="password" class="password form-control" type="password" placeholder="Password">
+                    
+                    <button type="submit" class="btn btn-primary btn-signin">Sign In</button>
                     <br>
                     <a href="">Forgot password?</a>
                     <hr>
                 </form>
-                <b>OR</b>
+                
                 <form action="/register" method="GET">
                     <button type="submit" class="btn btn-danger btn-signup">Sign Up</button>
                 </form>

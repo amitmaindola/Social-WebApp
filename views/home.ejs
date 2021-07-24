@@ -1,3 +1,54 @@
 <%-include("./components/header")%>
-This Is home
+<div class="bg-black"></div>
+
+<div class="posts-container">
+
+
+    <div class="home-head">
+        <a class="create-post" href="/newpost">
+            <div >
+                <i class="fas fa-pen-nib"></i>
+                 <div class="home-head-text">
+                    Create <p>a new post.</p>
+                 </div>
+            </div>
+        </a>
+        <a class="add-friend" href="">
+            <div >
+                <i class="fas fa-user-plus"></i>
+                
+                <div class="home-head-text">
+                    Add <p>new friends.</p>
+                 </div>
+            </div>
+        </a>
+    </div>
+
+    <% for (let i = 0; i < user.posts.length; i++) { %>
+
+    <div class="post">
+        <div class="post-head">
+            <div class="posting-username">
+                <%= user.fName %> <%=user.lName %>
+            </div>
+            <p class="time">05:14, 20-07-2021</p>
+        </div>
+
+        <div class="post-content">
+            <%= user.posts[i].post %>
+        </div>
+        <hr>
+        <div class="reaction">
+            <div class="like">
+                <a href=""><i class=" far fa-heart"></i></a> <%= user.posts[i].likes.length %>
+            </div>
+            <div class="comment">
+                <a href=""><i class=" far fa-comment"></i></a> <%= user.posts[i].comments.length %>
+            </div>
+        </div>
+    </div>
+
+    <% } %>
+
+</div>
 <%-include("./components/footer")%>

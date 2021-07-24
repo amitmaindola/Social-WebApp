@@ -1,0 +1,9 @@
+<%-include("./components/header")%>
+<div class="newpost-container">
+    <h1>Create a new post</h1>
+    <form action="/newpost" method="POST">
+        <textarea name="newpost" class="newpost-input" cols="30" rows="10"></textarea>
+       <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+<%-include("./components/footer")%>

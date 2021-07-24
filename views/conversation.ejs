@@ -1,0 +1,31 @@
+<%-include("./components/header")%>
+    <div class="chat-container">
+
+        <% for (let i = 0; i < chat.length; i++) { %>
+            
+            <% if(chat[i].senderId==myId) { %>
+                <div class="chat-user chat-user2">
+                    <div class="name-2"><%= name1 %></div>
+                    <div class="chat-content"><%= chat[i].message %></div>
+                    <div class="chat-time">06:25</div>
+                </div>
+            <% } else { %>
+                <div class="chat-user chat-user1">
+                    <div class="name-1"><%= name2 %></div>
+                    <div class="chat-content"><%= chat[i].message %></div>
+                    <div class="chat-time">06:25</div>
+                </div>
+            <% } %>
+
+        <% } %>
+        
+            <form action="/newmessage" method="POST" class="chat-input-box ">
+                <textarea name="chat" style="resize: none;" id=""  class="chat-input"></textarea>
+                <input type="hidden" name="sender" value="<%= myId %>">
+                <input type="hidden" name="userFriendIndex" value="<%= userFriendIndex %>">
+                <input type="hidden" name="receiver" value="<%= friendId %>">
+                <button><i class="far fa-arrow-alt-circle-right"></i></button>
+            </form>
+        
+    </div>
+<%-include("./components/footer")%>

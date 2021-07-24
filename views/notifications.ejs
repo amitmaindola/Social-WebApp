@@ -1,0 +1,18 @@
+<%-include("./components/header")%>
+<div class="bg-black"></div>
+
+<div class="notifications-list">
+   <% for (let i = 0; i < notifications.length; i++) { %>
+        <div class="notification-envelope">
+            <a href="">
+                <div class="notification">
+                    <%= notifications[i].notification %>
+                </div>
+                <div class="notification-time">
+                    12:35
+                </div>
+            </a>
+        </div>
+   <% } %>
+</div>
+<%-include("./components/footer")%>

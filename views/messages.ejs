@@ -1,3 +1,23 @@
 <%-include("./components/header")%>
-This Is Chatting Section.
+<div class="bg-black"></div>
+<div class="chat-list">
+    <!-- <h1 class="chat-list-head">Recent Messages</h1> -->
+
+    <% for (let i = 0; i < lasts.length; i++) { %>
+    <a href="/messages/<%= lasts[i].userId %>">
+        <div class="chat-preview">
+            <div class="last-message-envelop">
+                <div class="chat-username">
+                    <b><%= lasts[i].senderName() %> : </b>
+                </div>
+                <div class="last-message"><%= lasts[i].message %></div>
+            </div>
+            <div class="last-message-time">
+                18:28
+            </div>
+        </div>
+    </a>
+    <% } %>
+
+</div>
 <%-include("./components/footer")%>
